@@ -9,13 +9,10 @@ struct Matrix2D
 {
     vector<vector<int>> contents;
 
-};
+    Matrix2D add(Matrix2D lhs, Matrix2D rhs);
 
 void input_matrix()
 {
-    //sak: how many rows
-    //ask: how many columns
-    //read r rows c times
     int columns, rows;
 
     cout<<"number of rows: "; cin>>rows; cout<<endl;
@@ -23,11 +20,15 @@ void input_matrix()
 
     for (int i=0;i<3;i++)
     {
-        contents.push_back(vector<int>())
+        vector<int> row;
+        int tmp;
+        cout<<"adding a row with "<<columns<<" columns"<<endl;
         for(int j=0;j<3;j++)
         {
-
+            cout<<"introduce value: "; cin>>tmp; cout<<endl;
+            row.push_back(tmp);
         }
+        contents.push_back(row);
     }
 }
 
@@ -47,6 +48,7 @@ void print()
         cout<<endl;
     }
 }
+};
 
 int main()
 {

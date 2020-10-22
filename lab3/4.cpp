@@ -9,7 +9,20 @@ struct Matrix2D
 {
     vector<vector<int>> contents;
 
-    Matrix2D add(Matrix2D lhs, Matrix2D rhs);
+    Matrix2D add(Matrix2D other)
+    {
+        if (other.rows()==rows()&&other.columns()==columns())
+        {
+            Matrix2D result;
+            result.contents=contents;
+
+            for (int i=0;i<row();i++)
+            {
+                for (int j=0;j<row();j++)
+            }
+        }
+        else {cout<<"dimensions must match!"<<endl;}
+    }
 
 void input_matrix()
 {
@@ -52,24 +65,17 @@ void print()
 
 int main()
 {
-    //A 4x2, B 2x3
-    //declare the matrices
     Matrix2D a;
     Matrix2D b;
 
-    //initialize the contents
-    a.contents={{1,2},{3,4},{5,6}};
-    b.contents={{9,8,7},{6,5,4},{3,2,1}};
-
-    // A = [
-    //
-    //
-    // B = [
-    //
-    //
+    a.input_matrix();
+    b.input_matrix();
 
     a.print();
     b.print();
+
+    a.add(b);
+    a.print();
 
     return 0;
 }

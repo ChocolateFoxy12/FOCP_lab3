@@ -15,8 +15,8 @@ int main()
     Point2D mypoint;
 
     //initialize
-    mypoint.x=3.3;
-    mypoint.y=5.5;
+    mypoint.x=rand()%100;
+    mypoint.y=rand()%100;
 
     //print
     cout<<"the value of x: "<<mypoint.x<<endl;
